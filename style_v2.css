@@ -1,6 +1,6 @@
 @font-face {
-font-family:"Avara-Bold";
-src: url("Fonts/Avara-Bold.woff2") format("woff");
+    font-family:"Avara-Bold";
+    src: url("Fonts/Avara-Bold.woff2") format("woff");
 }
 
 
@@ -17,9 +17,9 @@ img {
 }
 
 .grid-container {
-display: grid;
-padding: 25px;  /* Ränder um unseren Grid-Container, 15px/20px = ObenUnten/RechtsLinks, Uhrzeigersinn*/
-column-gap: 15px; 
+    display: grid;
+    padding: 25px;  /* Ränder um unseren Grid-Container, 15px/20px = ObenUnten/RechtsLinks, Uhrzeigersinn*/
+    column-gap: 15px; 
 
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* fr = Fraction, Bruchteil von ganzer Fläche */
 grid-template-areas: 

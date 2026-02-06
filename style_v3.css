@@ -1,0 +1,190 @@
+@font-face {
+font-family:"Avara-Bold";
+src: url("Fonts/Avara-Bold.woff2") format("woff");
+}
+
+
+body{
+    background-color: black;
+    font-family: "Avara-Bold", serif;
+
+}
+
+
+
+img {
+    max-width: 100%; /* Bild passt sich Container an */
+    height: auto; /* Bild passt sich Container an */
+}
+
+
+.grid-container {
+    display: grid;
+    padding: 25px;  /* Ränder um unseren Grid-Container, 15px/20px = ObenUnten/RechtsLinks, Uhrzeigersinn*/
+    column-gap: 15px; 
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* fr = Fraction, Bruchteil von ganzer Fläche */
+    grid-template-areas: 
+
+        " . name name name . "
+        " . . bio . . "
+        " . image-1 . text-1 . "
+        " . . . . . "
+        " . text-2 . image-2 . "
+        " . . . . . "
+        " . image-3 . text-3 . "
+        " . . . . . ";
+}
+
+/* ------------------RASTER ELEMENTE--------------------- */
+
+.name {
+    grid-area: name;
+    position: relative;
+    bottom -100px;
+        /* Spricht die ganze Box an */
+
+        /*     position: sticky;
+                top: 0; = Titel bleibt oben Stecken*/
+        /* mix-blend-mode: difference; = Invertiert Titel*/
+        /*  z-index: 15; */
+}
+
+        .name h1 {
+            font-size: 100px;
+            /* Spricht nur den Text in der Box an */
+            align-self: center;
+            text-align: center;
+            margin-bottom: 30;
+            color:white;
+
+        }
+
+
+.bio {
+    grid-area: bio;
+    color: white;
+    align-self: center;
+    text-align: center;
+}
+
+            /* .bio p:hover {
+            opacity: o.5;
+            } */
+        
+.image-1 {
+    grid-area: image-1;
+    position: relative; 
+}
+
+        .image-1 img{
+        /*  transition: transform 0.5 ease;
+            transition: transform 0.5; */
+            transition: opacity o.5s ease; 
+        }
+
+            .image-1 .b{
+                position: absolute;
+                top:0;
+                left:0;
+                opacity: 0;
+            }
+
+            .image-1:hover .a{
+                opacity: 0;
+            }
+
+            .image-1:hover .b{
+                opacity: 1;
+            }
+
+        .image-1 img:hover{
+            transform: rotate(5deg) scale(1.1);
+        }
+
+.image-2 {
+    grid-area: image-2;
+    position: relative; 
+}
+
+
+            .image-2 img{
+                transition: transform 0.5 ease;
+                transition: transform 0.5; }
+       /*   box-shadow: 0 0 0 rgb(255, 255, 255);
+            transition: box-shadow 0.3s ease;*/
+
+            .image-2 img:hover{ 
+                transform: rotate(-5deg) scale(1.1); }
+            /* box-shadow: 5px 20px 5px 20px rgb(255, 255, 255) */
+
+            .image-2 .b{
+                position: absolute;
+                top:0;
+                left:0;
+                opacity: 0;
+            }
+
+            .image-2:hover .a{
+                opacity: 0;
+            }
+
+            .image-2:hover .b{
+                opacity: 1;
+            }
+        
+        
+
+.image-3 {
+    grid-area: image-3;
+    position: relative; 
+}
+
+       
+         .image-3 img{
+            transition: transform 0.5 ease;
+             transition: transform 0.5;} 
+      
+            .image-3 .b{
+                position: absolute;
+                top:0;
+                left:0;
+                opacity: 0;
+            }
+
+            .image-3:hover .a{
+                opacity: 0;
+            }
+
+            .image-3:hover .b{
+                opacity: 1;
+            }
+
+
+        .image-3 img:hover{
+            transform: rotate(5deg) scale(1.1);
+        }
+
+.text-1 {
+    grid-area: text-1;
+    font-size: 20px;
+    color: white;
+}
+
+
+
+.text-2 {
+    grid-area: text-2;
+    font-size: 20px;
+    color: white;
+}
+
+.text-3 {
+    grid-area: text-3;
+    font-size: 20px;
+    color: white;
+}
+
+
+
+

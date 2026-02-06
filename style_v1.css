@@ -5,8 +5,9 @@ src: url("Fonts/Avara-Bold.woff2") format("woff");
 
 
 body{
-    background-color: black;
     font-family: "Avara-Bold", serif;
+  background: #000000;
+background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, lab(100% 0.01 -0.01) 100%);
 }
 
 
@@ -19,13 +20,14 @@ img {
 .grid-container {
 display: grid;
 padding: 25px;  /* Ränder um unseren Grid-Container, 15px/20px = ObenUnten/RechtsLinks, Uhrzeigersinn*/
-column-gap: 15px; 
+gap: 15px;
+margin: 0; 
 
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* fr = Fraction, Bruchteil von ganzer Fläche */
 grid-template-areas: 
 " . name name name . "
 " . image-1 . . . "
-" . . . image-2. "
+" . . image-2 image-2. "
 " . . . . . "
 " . image-3 . . . "
 " . . . . text-1 ";
@@ -42,7 +44,7 @@ grid-template-areas:
     align-self: center;
     text-align: center;
     margin-bottom: 30;
-    color:white;
+    color:rgb(0, 0, 0);
 }
 
 .bio {
