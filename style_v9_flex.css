@@ -1,0 +1,82 @@
+@font-face {
+font-family:"pressuru";
+src: url(Fonts/pressuru.woff);
+}
+
+
+body{
+    background-color: rgb(29, 28, 28);
+    font-family: "pressuru", serif;
+    color: white;
+    margin: 0;
+    cursor: url("Data/Pointer.png") 10 10, default;
+}
+
+a:hover {
+  cursor: url("Data/Cursor.png") 10 10, default;
+}
+a link {
+
+    color: #ff1600;
+}
+
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 40px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.name {
+    text-align: left;
+    color:#ff1600
+}
+
+.name h1 {
+    font-size: 120px;
+    margin: 0;
+}
+
+.bio {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 50;
+}
+
+.bild-übersicht {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+
+.projekt-repros {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+
+img {
+    max-width: 100%; /* Bild passt sich Container an */
+    height: auto; /* Bild passt sich Container an */
+}
+
+.projekt-titel {
+    font-size: 28px;
+}
+
+.projekt-beschrieb {
+    max-width: 800px;
+}
+
+.kontakt {
+text-align: left;
+border-top: 1px solid #ff1600;
+padding-top: 40px;
+font-size: 30px;
+}

@@ -1,12 +1,12 @@
 @font-face {
-font-family:"Avara-Bold";
-src: url("Fonts/Avara-Bold.woff2") format("woff");
+font-family:"url(Fonts/Movement-DirectBlack.woff2";
+src: url(Fonts/pressuru.woff);
 }
 
 
 body{
     background-color: rgb(29, 28, 28);
-    font-family: "Avara-Bold", serif;
+    font-family: "url(Fonts/Movement-DirectBlack.woff2", serif;
 
 }
 
@@ -23,17 +23,24 @@ img {
     padding: 25px;  /* Ränder um unseren Grid-Container, 15px/20px = ObenUnten/RechtsLinks, Uhrzeigersinn*/
     column-gap: 15px; 
 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* fr = Fraction, Bruchteil von ganzer Fläche */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* fr = Fraction, Bruchteil von ganzer Fläche */
     grid-template-areas: 
 
-        " name name name name name "
-        " . . bio . . "
-        " . image-1 . text-1 . "
-        " . . . . . "
-        " . text-2 . image-2 . "
-        " . . . . . "
-        " . image-3 . text-3 . "
-        " . . . . . ";
+        " name name name name name name . kontakt  "
+        " . . bio bio bio bio . . "
+        " . . . . . . . . "
+        " . image-3 image-3 image-1 image-1 image-2 image-2 . "
+        " . . . . . . . . "
+        " . . . . . . . . "
+        " . text-1 text-1 . . . . . "
+        " . repro-1 repro-1 . . beschrieb-1 beschrieb-1 . "
+        " . text-2 text-2 . . . . . "
+        " . repro-2 repro-2 . . beschrieb-2 beschrieb-2 . "
+        " . text-3 text-3 . . . . . "
+        " . repro-3 repro-3 . . beschrieb-3 beschrieb-3 . "
+        " . . . . . . . . "
+        " . . . . . . . . ";
+
 }
 
 /* ------------------RASTER ELEMENTE--------------------- */
@@ -52,7 +59,7 @@ background: linear-gradient(0deg,rgb(29, 28, 28) 53%, rgba(255, 255, 255, 1) 100
 }
 
         .name h1 {
-            font-size: 100px;
+            font-size: 150px;
             /* Spricht nur den Text in der Box an */
             align-self: center;
             text-align: center;
@@ -63,107 +70,119 @@ background: linear-gradient(0deg,rgb(29, 28, 28) 53%, rgba(255, 255, 255, 1) 100
 
         /* Text-align: Justify/ right/ left etc. */
 
+.kontakt{
+grid-area: kontakt;
+
+}
 .bio {
     grid-area: bio;
     color: white;
     align-self: center;
     text-align: center;
+    font-size: 30px;
+}
+
+a {color: white;
+    text-decoration: none;
+}
+a :hover {
+    color: rgb(159, 8, 8);
 }
 
             /* .bio p:hover {
             opacity: o.5;
             } */
         
-.image-1 {
-    grid-area: image-1;
+.repro-1 {
+    grid-area: repro-1;
     position: relative; 
 }
 
-        .image-1 img{
+        .repro-1 img{
         /*  transition: transform 0.5 ease;
             transition: transform 0.5; */
             transition: opacity o.5s ease; 
         }
 
-            .image-1 .b{
-                position: absolute;
-                top:0;
-                left:0;
-                opacity: 0;
-            }
-
-            .image-1:hover .a{
-                opacity: 0;
-            }
-
-            .image-1:hover .b{
+        /*  
+            .repro-1:hover .a{
                 opacity: 1;
             }
-
-        .image-1 img:hover{
+            .repro-1:hover .b{
+                opacity: 1;
+            }
+            .repro-1:hover .c{
+                opacity: 1;
+            }
+           .repro-1:hover .d{
+                opacity: 1;
+            }
+        .repro-1 img:hover{
             transform: rotate(5deg) scale(1.1);
         }
+        */
 
-.image-2 {
-    grid-area: image-2;
+
+.repro-2 {
+    grid-area: repro-2;
     position: relative; 
 }
 
 
-            .image-2 img{
+            .repro-2 img{
                 transition: transform 0.5 ease;
                 transition: transform 0.5; }
        /*   box-shadow: 0 0 0 rgb(255, 255, 255);
             transition: box-shadow 0.3s ease;*/
 
-            .image-2 img:hover{ 
+            .repro-2 img:hover{ 
                 transform: rotate(-5deg) scale(1.1); }
             /* box-shadow: 5px 20px 5px 20px rgb(255, 255, 255) */
 
-            .image-2 .b{
+            .repro-2 .b{
                 position: absolute;
                 top:0;
                 left:0;
                 opacity: 0;
             }
 
-            .image-2:hover .a{
+            .repro-2:hover .a{
                 opacity: 0;
             }
 
-            .image-2:hover .b{
+            .repro-2:hover .b{
                 opacity: 1;
             }
         
         
 
-.image-3 {
-    grid-area: image-3;
+.repro-3 {
+    grid-area: repro-3;
     position: relative; 
 }
 
        
-         .image-3 img{
+         .repro-3 img{
             transition: transform 0.5 ease;
              transition: transform 0.5;} 
       
-            .image-3 .b{
+            .repro-3 .b{
                 position: absolute;
                 top:0;
                 left:0;
                 opacity: 0;
             }
 
-            .image-3:hover .a{
+            .repro-3:hover .a{
                 opacity: 0;
             }
 
-            .image-3:hover .b{
+            .repro-3:hover .b{
                 opacity: 1;
             }
 
 
-        .image-3 img:hover{
+        .repro-3 img:hover{
             transform: rotate(5deg) scale(1.1);
         }
 
@@ -172,7 +191,6 @@ background: linear-gradient(0deg,rgb(29, 28, 28) 53%, rgba(255, 255, 255, 1) 100
     font-size: 20px;
     color: white;
 }
-
 
 
 .text-2 {
@@ -187,6 +205,40 @@ background: linear-gradient(0deg,rgb(29, 28, 28) 53%, rgba(255, 255, 255, 1) 100
     color: white;
 }
 
+.beschrieb-1 {
+    grid-area: beschrieb-1;
+    font-size: 15px;
+    color: white;
+    text-align: center;    
 
+}
 
+.beschrieb-2 {
+    grid-area: beschrieb-2;
+    font-size: 15px;
+    color: white;  
+    text-align: center;  
 
+}
+
+.beschrieb-3 {
+    grid-area: beschrieb-3;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.image-1 {
+    grid-area: image-1;
+    position: relative; 
+}
+
+.image-2 {
+    grid-area: image-2;
+    position: relative; 
+}
+
+.image-3 {
+    grid-area: image-3;
+    position: relative; 
+}

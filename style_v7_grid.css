@@ -1,0 +1,207 @@
+@font-face {
+font-family:"Movement";
+src: url(Fonts/Movement-DirectBlack.woff2);
+}
+
+
+body{
+    background-color: rgb(29, 28, 28);
+    font-family: "Movement", serif;
+
+}
+
+
+
+img {
+    max-width: 100%; /* Bild passt sich Container an */
+    height: auto; /* Bild passt sich Container an */
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr); /* fr = Fraction, Bruchteil von ganzer Fläche */
+    padding: 10px;  /* Ränder um unseren Grid-Container, 15px/20px = ObenUnten/RechtsLinks, Uhrzeigersinn*/
+    column-gap: 5px; 
+
+    grid-template-areas: 
+        " name name name name name name . . . "
+        " . . bio bio bio bio . . . "
+        " . . . . . . . . . "
+        " . image-3 image-3 image-1 image-1 image-2 image-2 . . "
+        " . . . . . . . . . "
+        " . . . . . . . . . "
+        " . text-1 text-1 . . . . . . "
+        " . . repro-1a repro-1b repro-1c repro-1d repro-1e . . "
+        " . . beschrieb-1 beschrieb-3 . . . . . "
+        " . text-2 text-2 . . . . . . "
+        " . . repro-2a repro-2b repro-2c repro-2d repro-2e . . "
+        " . . beschrieb-2 beschrieb-3 . . . . . "
+        " . text-3 text-3 . . . . . . "
+         " . . repro-3a repro-3b repro-3c repro-3d repro-3e . . "
+         " . . beschrieb-3 beschrieb-3 . . . . . "
+        " . kontakt kontakt . . . . . . "
+        " . . . . . . . . . ";
+
+}
+
+/* ------------------RASTER ELEMENTE--------------------- */
+
+.name {
+    grid-area: name;
+    position: relative;
+    background: #202021;
+    background: linear-gradient(0deg,rgb(29, 28, 28) 53%, rgba(255, 255, 255, 1) 100%);
+}
+
+        .name h1 {
+            font-size: 150px;
+            /* Spricht nur den Text in der Box an */
+            align-self: center;
+            text-align: center;
+            margin-bottom: 30px;
+            color:white;
+
+        }
+
+        /* Text-align: Justify/ right/ left etc. */
+
+.kontakt{
+grid-area: kontakt;
+
+}
+.bio {
+    grid-area: bio;
+    color: white;
+    align-self: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+a {color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(159, 8, 8);
+}
+
+
+.image-1 {
+    grid-area: image-1;       
+    position: relative;
+}
+.image-2 {
+    grid-area: image-2;       
+    position: relative;
+}
+.image-3 {
+    grid-area: image-3;       
+    position: relative;
+}
+
+.text-1 {
+    grid-area: text-1;
+    font-size: 20px;
+    color: white;
+}
+.text-2 {
+    grid-area: text-2;
+    font-size: 20px;
+    color: white;
+}
+.text-3 {
+    grid-area: text-3;
+    font-size: 20px;
+    color: white;
+}
+
+
+.beschrieb-1 {
+    grid-area: beschrieb-1;
+    font-size: 15px;
+    color: white;
+    text-align: center;    
+
+}
+.beschrieb-2 {
+    grid-area: beschrieb-2;
+    font-size: 15px;
+    color: white;  
+    text-align: center;  
+
+}
+.beschrieb-3 {
+    grid-area: beschrieb-3;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+
+.repro-11 {
+    grid-area: repro-11;
+    position: relative; 
+}
+.repro-12 {
+    grid-area: repro-12;
+    position: relative; 
+}
+.repro-13 {
+    grid-area: repro-13;
+    position: relative; 
+}
+.repro-14 {
+    grid-area: repro-14;
+    position: relative; 
+}
+.repro-15 {
+    grid-area: repro-15;
+    position: relative; 
+}
+
+
+
+.repro-21 {
+    grid-area: repro-21;
+    position: relative; 
+}
+.repro-22 {
+    grid-area: repro-22;
+    position: relative; 
+}
+.repro-23 {
+    grid-area: repro-23;
+    position: relative; 
+}
+.repro-24 {
+    grid-area: repro-24;
+    position: relative; 
+}
+.repro-25 {
+    grid-area: repro-25;
+    position: relative; 
+}
+
+
+
+
+.repro-31 {
+    grid-area: repro-31;
+    position: relative; 
+}
+.repro-32 {
+    grid-area: repro-32;
+    position: relative; 
+}
+.repro-33 {
+    grid-area: repro-33;
+    position: relative; 
+}
+.repro-34 {
+    grid-area: repro-34;
+    position: relative; 
+}
+.repro-35 {
+    grid-area: repro-35;
+    position: relative; 
+}

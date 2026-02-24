@@ -41,7 +41,6 @@ img {
 .name {
     grid-area: name;
     position: relative;
-    bottom -100px;
         /* Spricht die ganze Box an */
 
         /*     position: sticky;
