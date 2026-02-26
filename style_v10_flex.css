@@ -1,0 +1,287 @@
+@font-face {
+  font-family: "pressuru";
+  src: url(Fonts/pressuru.woff);
+}
+
+body {
+  background-color: rgb(29, 28, 28);
+  font-family: "pressuru", serif;
+  color: white;
+  gap: 70px;
+  cursor: url("Data/Pointer.png") 10 10, default;
+}
+a:hover {
+  cursor: url("Data/Cursor.png") 10 10, default;
+}
+
+a {
+  color: #ff1600;
+  text-decoration: none;
+}
+
+p {
+  text-align: center;
+}
+/* HEADER — startet zentriert und gross */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgb(29, 28, 28);
+  display: flex;
+  align-items: center;
+  justify-content: center;     /* startet zentriert */
+  flex-direction: column;      /* startet als Spalte */
+  padding: 15px 70px;
+  border-bottom: 1px solid #ff1600;
+  box-sizing: border-box;
+
+  /* Scroll Animation */
+  animation: headerShrink linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 300px;  /* 300px = wie weit man scrollt bis fertig */
+}
+
+.sticky-header h1 {
+  font-size: px;            /* startet gross */
+  margin: 0;
+  color: #ff1600;
+  text-align: center;
+  width: 100%;
+
+  /* Scroll Animation */
+  animation: titelShrink linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 300px;
+}
+
+/* HEADER — von zentriert/Spalte zu links/Reihe */
+@keyframes headerShrink {
+  0% {
+    justify-content: center;
+    flex-direction: column;
+  }
+  100% {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+/* TITEL — von gross/mittig zu klein/links */
+@keyframes titelShrink {
+  0% {
+    font-size: 120px;
+    text-align: center;
+    width: 100%;
+  }
+  100% {
+    font-size: 36px;
+    text-align: left;
+    width: auto;
+  }
+}
+
+
+/* STICKY HEADER */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgb(29, 28, 28);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 70px;
+  border-bottom: 1px solid #ff1600;
+  box-sizing: border-box;
+}
+
+.sticky-header h1 {
+  font-size: 70px;
+  margin: 0;
+  color: #ff1600;
+}
+
+.leiste a {
+  color: white;
+  text-decoration: none;
+  margin-left: 40px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  transition: color 0.2s ease;
+}
+
+html{
+scroll-behavior: smooth;
+scroll-padding-top: 200px;
+
+}
+
+.leiste a:hover {
+  color: #ff1600;
+}
+
+/* GRID / LAYOUT */
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 200px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 140px;
+}
+
+/* BIO */
+.bio {
+  max-width: 900px;
+  text-align: center;
+  font-size: 18px;
+  transition: opacity 0.1s ease, transform 0.1s ease;
+}
+
+/* BILDER ÜBERSICHT */
+.bild-übersicht {
+  display: grid;
+  max-width: 1300px;
+  margin: auto;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  border-top: 1px solid #ff1600;
+  border-bottom: 1px solid #ff1600;
+}
+
+/* PROJEKTE */
+.projekt-repros {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.projekt-titel {
+  font-size: 28px;
+  padding-left: 100px;
+  padding-top: 60px;
+}
+
+.projektbeschrieb {
+  max-width: 800px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* BLUR HOVER EFFEKT */
+.grid-container:has(.blur:hover) .blur {
+  filter: blur(3px);
+  opacity: 0.5;
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.blur:hover {
+  filter: blur(0) !important;
+  opacity: 1 !important;
+}
+
+/* KONTAKT */
+.kontakt {
+  text-align: left;
+  border-top: 1px solid #ff1600;
+  padding-top: 40px;
+  font-size: 30px;
+}
+
+
+/* BIO — immer sichtbar, egal wie schmal */
+.bio {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  padding: 0 20px;        /* Abstand links und rechts */
+  box-sizing: border-box; /* Padding wird eingerechnet, kein Overflow */
+  transition: opacity 0.1s ease, transform 0.1s ease;
+}
+
+
+/* Handy — schmale Bildschirme */
+@media (max-width: 600px) {
+  .bio {
+    font-size: 14px;  /* etwas kleiner damit Text passt */
+    padding: 0 15px;
+  }
+
+  .sticky-header {
+    padding: 15px 20px; /* Header auch schmaler */
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sticky-header h1 {
+    font-size: 36px; /* Titel kleiner */
+  }
+
+  .leiste a {
+    margin-left: 15px;
+    font-size: 14px;
+  }
+}
+
+
+/* BILD CARDS MIT OVERLAY */
+.bild-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.bild-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.bild-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 20px 15px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  color: white;
+  font-family: "pressuru", serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+/* Hover — Bild dunkler, Text rot */
+.bild-card:hover img {
+  opacity: 0.75;
+  transform: scale(1.02);
+}
+
+.bild-card:hover .bild-overlay span {
+  color: #ff1600;
+  transition: color 0.3s ease;
+}
+

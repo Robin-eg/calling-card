@@ -1,16 +1,19 @@
 @font-face {
-font-family:"Movement";
-src: url(Fonts/Movement-DirectBlack.woff2);
+font-family:"Pressuru";
+src: url(Fonts/pressuru.woff);
 }
 
 
 body{
     background-color: rgb(29, 28, 28);
-    font-family: "Movement", serif;
-
+    font-family: "Pressuru", serif;
+    cursor: url("Data/Pointer.png") 10 10, default;
 }
 
 
+a:hover {
+  cursor: url("Data/Cursor.png") 10 10, default;
+}
 
 img {
     max-width: 100%; /* Bild passt sich Container an */
@@ -33,10 +36,10 @@ img {
         " . . . . . . . . . "
         " . text-1 text-1 . . . . . . "
         " . . repro-1a repro-1b repro-1c repro-1d repro-1e . . "
-        " . . beschrieb-1 beschrieb-3 . . . . . "
+        " . . beschrieb-1 beschrieb-1 . . . . . "
         " . text-2 text-2 . . . . . . "
         " . . repro-2a repro-2b repro-2c repro-2d repro-2e . . "
-        " . . beschrieb-2 beschrieb-3 . . . . . "
+        " . . beschrieb-2 beschrieb-2 . . . . . "
         " . text-3 text-3 . . . . . . "
          " . . repro-3a repro-3b repro-3c repro-3d repro-3e . . "
          " . . beschrieb-3 beschrieb-3 . . . . . "
@@ -50,26 +53,23 @@ img {
 .name {
     grid-area: name;
     position: relative;
-    background: #202021;
-    background: linear-gradient(0deg,rgb(29, 28, 28) 53%, rgba(255, 255, 255, 1) 100%);
 }
+.name h1 {
+    font-size: 150px;
+    /* Spricht nur den Text in der Box an */
+    margin-bottom: 30px;
+    color:white;
+  }
 
-        .name h1 {
-            font-size: 150px;
-            /* Spricht nur den Text in der Box an */
-            align-self: center;
-            text-align: center;
-            margin-bottom: 30px;
-            color:white;
-
-        }
-
-        /* Text-align: Justify/ right/ left etc. */
+     /* Text-align: Justify/ right/ left etc. */
 
 .kontakt{
 grid-area: kontakt;
-
 }
+
+
+
+
 .bio {
     grid-area: bio;
     color: white;
@@ -78,17 +78,19 @@ grid-area: kontakt;
     font-size: 30px;
 }
 
+
+
+
 a {color: white;
     text-decoration: none;
 }
-a:hover {
-    color: rgb(159, 8, 8);
-}
+
+
 
 
 .image-1 {
     grid-area: image-1;       
-    position: relative;
+    position: relatve;
 }
 .image-2 {
     grid-area: image-2;       
@@ -98,6 +100,9 @@ a:hover {
     grid-area: image-3;       
     position: relative;
 }
+
+
+
 
 .text-1 {
     grid-area: text-1;
@@ -114,6 +119,8 @@ a:hover {
     font-size: 20px;
     color: white;
 }
+
+
 
 
 .beschrieb-1 {
@@ -138,70 +145,72 @@ a:hover {
 }
 
 
-.repro-11 {
-    grid-area: repro-11;
+
+
+.repro-1a {
+    grid-area: repro-1a;
     position: relative; 
 }
-.repro-12 {
-    grid-area: repro-12;
+.repro-1b {
+    grid-area: repro-1b;
     position: relative; 
 }
-.repro-13 {
-    grid-area: repro-13;
+.repro-1c {
+    grid-area: repro-1c;
     position: relative; 
 }
-.repro-14 {
-    grid-area: repro-14;
+.repro-1d {
+    grid-area: repro-1d;
     position: relative; 
 }
-.repro-15 {
-    grid-area: repro-15;
+.repro-1e {
+    grid-area: repro-1e;
     position: relative; 
 }
 
 
 
-.repro-21 {
-    grid-area: repro-21;
+.repro-2a {
+    grid-area: repro-2a;
     position: relative; 
 }
-.repro-22 {
-    grid-area: repro-22;
+.repro-2b {
+    grid-area: repro-2b;
     position: relative; 
 }
-.repro-23 {
-    grid-area: repro-23;
+.repro-2c {
+    grid-area: repro-2c;
     position: relative; 
 }
-.repro-24 {
-    grid-area: repro-24;
+.repro-2d {
+    grid-area: repro-2d;
     position: relative; 
 }
-.repro-25 {
-    grid-area: repro-25;
+.repro-2e {
+    grid-area: repro-2e;
     position: relative; 
 }
 
 
 
 
-.repro-31 {
-    grid-area: repro-31;
+.repro-3a {
+    grid-area: repro-3a;
     position: relative; 
 }
-.repro-32 {
-    grid-area: repro-32;
+.repro-3b {
+    grid-area: repro-3b;
     position: relative; 
 }
-.repro-33 {
-    grid-area: repro-33;
+.repro-3c {
+    grid-area: repro-3c;
     position: relative; 
 }
-.repro-34 {
-    grid-area: repro-34;
+.repro-3d {
+    grid-area: repro-3d;
     position: relative; 
 }
-.repro-35 {
-    grid-area: repro-35;
+.repro-3e {
+    grid-area: repro-3e;
     position: relative; 
 }

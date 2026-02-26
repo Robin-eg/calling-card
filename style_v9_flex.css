@@ -15,9 +15,14 @@ body{
 a:hover {
   cursor: url("Data/Cursor.png") 10 10, default;
 }
-a link {
 
+a {
     color: #ff1600;
+    text-decoration: none;
+}
+
+p {
+    text-align: center;
 }
 
 
@@ -74,9 +79,23 @@ img {
     max-width: 800px;
 }
 
+
 .kontakt {
 text-align: left;
 border-top: 1px solid #ff1600;
 padding-top: 40px;
 font-size: 30px;
+}
+
+.grid-container:has(.blur:hover) .blur {
+  filter: blur(3px);
+  opacity: 0.5;
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.blur:hover {
+  filter: blur(0) !important;
+  opacity: 1 !important;
 }

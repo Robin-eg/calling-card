@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ann-Robin Egli" />
+  <meta name="description" content="Portfolio Ann-Robin Egli (Fachklasse Grafik Luzern)." />
+  <link rel="stylesheet" href="style_v15 Kombi.css" />
+</head>
+
+<body>
+
+<!-- STICKY HEADER (v12) -->
+<header class="sticky-header">
+  <h1>Ann-Robin Egli</h1>
+  <nav class="leiste">
+    <a href="#projekt1">Projekt 1</a>
+    <a href="#projekt2">Projekt 2</a>
+    <a href="#projekt3">Projekt 3</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<!-- BIO (v12) -->
+<section class="bio">
+  <p>Willkommen zu meiner Webseite. Mein Name ist Robin Giachino, 
+    ich bin 18 Jahre alt und angehende Grafikerin an der 
+    <a href="https://fachklassegrafik.ch" target="_blank">Fachklasse Grafik Luzern.</a> 
+    Seit kleinauf habe ich ein Feingefühl für Gestaltung, Farben, Komposition 
+    und stetigen Drang meine Ideen zu realisieren.
+  </p>
+</section>
+
+<!-- SLIDESHOW (v13) -->
+<section class="section slider-section">
+  <div class="section__head">
+    <h2 class="section__title">Highlights</h2>
+  </div>
+
+  <div class="hslider" aria-label="Highlights Slider">
+
+    <article class="hslider__intro">
+      <div class="hslider__introInner">
+        <h3>Vorschau</h3>
+      </div>
+    </article>
+
+    <div class="hslider__track" id="hTrack">
+
+      <a class="card" href="#projekt1">
+        <div class="card__meta">
+          <span class="pill">Projekt</span>
+          <span class="date">FotoLayout</span>
+        </div>
+        <h3 class="card__title">FotoLayout: Story + Fotoserie</h3>
+        <p class="card__text">Konzept, Bildsprache, Sequenz & Layout.</p>
+        <div class="card__thumb">
+          <img src="Data/Robin_Egli_FotoLayout-1a.jpg" alt="FotoLayout Vorschau" loading="lazy">
+        </div>
+      </a>
+
+      <a class="card" href="#projekt2">
+        <div class="card__meta">
+          <span class="pill">Projekt</span>
+          <span class="date">GrundlagenTypo</span>
+        </div>
+        <h3 class="card__title">Typografie & Rhythmus</h3>
+        <p class="card__text">Struktur, Hierarchie, Mikrotypografie.</p>
+        <div class="card__thumb">
+          <img src="Data/Robin_Egli_GrundlagenTypo-1a.jpg" alt="GrundlagenTypo Vorschau" loading="lazy">
+        </div>
+      </a>
+
+      <a class="card" href="#projekt3">
+        <div class="card__meta">
+          <span class="pill">Projekt</span>
+          <span class="date">ParisProjekt</span>
+        </div>
+        <h3 class="card__title">ParisProjekt: Reportage & Gestaltung</h3>
+        <p class="card__text">Mood, Editorial-Look, Bildauswahl.</p>
+        <div class="card__thumb">
+          <img src="Data/Robin_Egli_ParisProjekt-1a.jpg" alt="ParisProjekt Vorschau" loading="lazy">
+        </div>
+      </a>
+
+      <button class="hslider__btn hslider__btn--left" type="button" aria-label="Links scrollen" data-dir="-1">&#8249;</button>
+      <button class="hslider__btn hslider__btn--right" type="button" aria-label="Rechts scrollen" data-dir="1">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<!-- PROJEKT 1 -->
+<section class="projekt" id="projekt1">
+  <h2 class="projekt-titel">FotoLayout</h2>
+  <div class="projekt-repros">
+    <img class="blur" src="Data/Robin_Egli_FotoLayout-2a.jpg"/>
+    <img class="blur" src="Data/Robin_Egli_FotoLayout-2b.jpg"/>
+    <img class="blur" src="Data/Robin_Egli_FotoLayout-2c.jpg"/>
+    <img class="blur" src="Data/Robin_Egli_FotoLayout-2d.jpg"/>
+    <img class="blur" src="Data/Robin_Egli_FotoLayout-2e.jpg"/>
+  </div>
+  <p class="projektbeschrieb">
+    Bei unserem Foto/Layout Projekt bekamen wir die Aufgabe, eine Geschichte zu schreiben
+    und dazu eine Fotoserie zu realisieren.
+  </p>
+</section>
+
+<!-- PROJEKT 2 -->
+<section class="projekt" id="projekt2">
+  <h2 class="projekt-titel">GrundlagenTypo</h2>
+  <div class="projekt-repros">
+    <img class="blur" src="Data/Robin_Egli_GrundlagenTypo-2a.jpg"/>
+    <img class="blur" src="Data/Robin_Egli_GrundlagenTypo-2b.jpg"/>
+    <img class="blur" src="Data/Robin_Egli_GrundlagenTypo-2c.jpg"/>
+    <img class="blur" src="Data/Robin_Egli_GrundlagenTypo-2d.jpg"/>
+    <img class="blur" src="Data/Robin_Egli_GrundlagenTypo-2e.jpg"/>
+  </div>
+  <p class="projektbeschrieb">
+    Übungen zu typografischer Ordnung: Hierarchie, Lesbarkeit und Rhythmus von Raster bis Detail.
+  </p>
+</section>
+
+<!-- PROJEKT 3 -->
+<section class="projekt" id="projekt3">
+  <h2 class="projekt-titel">ParisProjekt</h2>
+  <div class="projekt-repros">
+    <img class="blur" src="Data/Robin_Egli_ParisProjekt-2a.jpg"/>
+    <img class="blur" src="Data/Robin_Egli_ParisProjekt-2b.jpg"/>
+    <img class="blur" src="Data/Robin_Egli_ParisProjekt-2c.jpg"/>
+    <img class="blur" src="Data/Robin_Egli_ParisProjekt-2d.jpg"/>
+    <img class="blur" src="Data/Robin_Egli_ParisProjekt-2e.jpg"/>
+  </div>
+  <p class="projektbeschrieb">
+    Ein Projekt rund um Bildauswahl, Storytelling und Gestaltung inspiriert von Paris.
+  </p>
+</section>
+
+<!-- KONTAKT -->
+<footer class="kontakt" id="kontakt">
+  <div>
+    <h3>Kontakt</h3>
+    <p>Ober-Trüebebach 6 <br>
+      6170 Schüpfheim <br>
+      E-Mail: <a href="mailto:robin_egli2@sluz.ch">Robin_Egli2@sluz.ch</a> <br>
+      Tel: 076 580 60 26
+    </p>
+  </div>
+</footer>
+
+<script src="slider.js"></script>
+</body>
+</html>

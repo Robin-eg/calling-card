@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "pressuru";
+  src: url(Fonts/pressuru.woff);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(29, 28, 28);
+  font-family: "pressuru", serif;
+  color: white;
+  margin: 0;
+  cursor: url("Data/Pointer.png") 10 10, default;
+}
+
+a:hover {
+  cursor: url("Data/Cursor.png") 10 10, default;
+}
+
+a {
+  color: #ff1600;
+  text-decoration: none;
+}
+
+p {
+  text-align: center;
+}
+
+/* ================================
+   STICKY HEADER
+================================ */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgb(29, 28, 28);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 70px;
+  border-bottom: 1px solid #ff1600;
+}
+
+.sticky-header h1 {
+  font-size: 36px;
+  margin: 0;
+  color: #ff1600;
+}
+
+.leiste a {
+  color: white;
+  text-decoration: none;
+  margin-left: 40px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  transition: color 0.2s ease;
+}
+
+.leiste a:hover {
+  color: #ff1600;
+}
+
+/* ================================
+   HERO BEREICH
+   Bio bleibt fest, Bilder scrollen drüber
+================================ */
+.hero {
+  position: relative;
+  margin-top: 70px; /* Abstand wegen fixiertem Header */
+  height: 220vh;   /* Genug Platz zum Scrollen */
+}
+
+/* BIO — fest im Hintergrund, klebt oben */
+.bio {
+  position: sticky;
+  top: 120px; /* unter dem Header */
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  padding: 0 70px;
+}
+
+/* BILDER — scrollen normal mit der Seite,
+   aber starten weiter unten damit sie erst
+   beim Scrollen über die Bio kommen */
+.übersicht-scroll {
+  position: absolute;
+  top: 60vh; /* Bilder starten in der Mitte des Viewports */
+  left: 0;
+  width: 100%;
+  z-index: 10; /* über der Bio und über dem Titel */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 0 70px;
+  background-color: rgb(29, 28, 28); /* deckt Bio + Titel ab */
+  padding-bottom: 60px;
+}
+
+.übersicht-scroll a {
+  display: block;
+}
+
+.übersicht-scroll img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.übersicht-scroll a:hover img {
+  opacity: 0.7;
+}
+
+/* ================================
+   PROJEKTE BEREICH
+================================ */
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 80px 70px;
+  position: relative;
+  z-index: 10;
+  background-color: rgb(29, 28, 28);
+}
+
+.projekt-repros {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.projekt-titel {
+  font-size: 28px;
+}
+
+.projektbeschrieb {
+  max-width: 800px;
+  margin: 20px auto 0;
+}
+
+/* ================================
+   BLUR HOVER EFFEKT
+================================ */
+.grid-container:has(.blur:hover) .blur {
+  filter: blur(3px);
+  opacity: 0.5;
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.blur:hover {
+  filter: blur(0) !important;
+  opacity: 1 !important;
+}
+
+/* ================================
+   KONTAKT
+================================ */
+.kontakt {
+  text-align: left;
+  border-top: 1px solid #ff1600;
+  padding-top: 40px;
+  font-size: 30px;
+}

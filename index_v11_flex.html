@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="Ann-Robin Egli" />
+<meta name="description" content="I'm a Graphic-Design-Student at the Fachklasse Grafik in Luzern."/>
+<link rel="stylesheet" href="style_v11_flex.css" />
+</head>
+<body>
+
+<div class="grid-container">
+
+  <!-- STICKY HEADER -->
+  <header class="sticky-header">
+    <h1>Ann-Robin Egli</h1>
+    <nav class="leiste">
+      <a href="#übersicht">Projekte</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <!-- BIO -->
+  <section class="bio">
+    <p>Willkommen zu meiner Webseite. Mein Name ist Robin Giachino, 
+      ich bin 18 Jahre alt und angehende Grafikerin an der 
+      <a href="https://fachklassegrafik.ch" target="_blank">Fachklasse Grafik Luzern.</a> 
+      Seit kleinauf habe ich ein Feingefühl für Gestaltung, Farben, Komposition 
+      und stetigen Drang meine Ideen zu realisieren.
+    </p>
+  </section>
+
+  <!-- BILDER ÜBERSICHT -->
+  <section class="übersicht" id="übersicht">
+    <div class="bild-übersicht">
+      <img src="Data/Robin_Egli_FotoLayout-1a.jpg" class="a"/>
+      <img src="Data/Robin_Egli_GrundlagenTypo-1a.jpg" class="a"/>  
+      <img src="Data/Robin_Egli_ParisProjekt-1a.jpg" class="a"/>
+    </div>
+  </section>
+
+  <!-- PROJEKT 1 -->
+  <section class="projekt">
+    <h2 class="projekt-titel">FotoLayout</h2>
+    <div class="projekt-repros">
+      <img class="blur" src="Data/Robin_Egli_FotoLayout-2a.jpg"/>
+      <img class="blur" src="Data/Robin_Egli_FotoLayout-2b.jpg"/>
+      <img class="blur" src="Data/Robin_Egli_FotoLayout-2c.jpg"/>
+      <img class="blur" src="Data/Robin_Egli_FotoLayout-2d.jpg"/>
+      <img class="blur" src="Data/Robin_Egli_FotoLayout-2e.jpg"/>
+    </div>
+    <p class="projektbeschrieb">
+      Bei unserem Foto/Layout projekt bekamen 
+      wir die Aufgabe eine Geschichte zu schreiben 
+      und dazu eine Fotoserie zu realisieren
+    </p>
+  </section>
+
+  <!-- PROJEKT 2 -->
+  <section class="projekt">
+    <h2 class="projekt-titel">GrundlagenTypo</h2>
+    <div class="projekt-repros">
+      <img class="blur" src="Data/Robin_Egli_GrundlagenTypo-2a.jpg"/>
+      <img class="blur" src="Data/Robin_Egli_GrundlagenTypo-2b.jpg"/>
+      <img class="blur" src="Data/Robin_Egli_GrundlagenTypo-2c.jpg"/>
+      <img class="blur" src="Data/Robin_Egli_GrundlagenTypo-2d.jpg"/>
+      <img class="blur" src="Data/Robin_Egli_GrundlagenTypo-2e.jpg"/>
+    </div>
+    <p class="projektbeschrieb-2">
+      Bei unserem Foto/Layout projekt bekamen 
+      wir die Aufgabe eine Geschichte zu schreiben 
+      und dazu eine Fotoserie zu realisieren
+    </p>
+  </section>
+
+  <!-- PROJEKT 3 -->
+  <section class="projekt">
+    <h2 class="projekt-titel">ParisProjekt</h2>
+    <div class="projekt-repros">
+      <img class="blur" src="Data/Robin_Egli_ParisProjekt-2a.jpg"/>
+      <img class="blur" src="Data/Robin_Egli_ParisProjekt-2b.jpg"/>
+      <img class="blur" src="Data/Robin_Egli_ParisProjekt-2b.jpg"/>
+      <img class="blur" src="Data/Robin_Egli_ParisProjekt-2d.jpg"/>
+      <img class="blur" src="Data/Robin_Egli_ParisProjekt-2e.jpg"/>
+    </div>
+    <p class="projektbeschrieb">
+      Bei unserem Foto/Layout projekt bekamen 
+      wir die Aufgabe eine Geschichte zu schreiben 
+      und dazu eine Fotoserie zu realisieren
+    </p>
+  </section>
+
+  <!-- KONTAKT -->
+  <footer class="kontakt" id="kontakt">
+    <div>
+      <h3>Kontakt</h3>
+      <p>Ober-Trüebebach 6 <br>
+        6170 Schüpfheim <br>
+        E-Mail: <a href="mailto:robin_egli2@sluz.ch">Robin_Egli2@sluz.ch</a> <br>
+        Tel: 076 580 60 26
+      </p>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  const bio = document.querySelector('.bio');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const fadeStart = 50;
+    const fadeEnd = 350;
+
+    const opacity = Math.max(0, 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart));
+    const translateY = scrollY * 0.25;
+
+    bio.style.opacity = opacity;
+    bio.style.transform = `translateY(-${translateY}px)`;
+  });
+</script>
+
+</body>
+</html>

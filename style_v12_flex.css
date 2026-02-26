@@ -1,0 +1,312 @@
+@font-face {
+  font-family: "pressuru";
+  src: url(Fonts/pressuru.woff);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(29, 28, 28);
+  font-family: "pressuru", serif;
+  color: white;
+  cursor: url("Data/Pointer.png") 10 10, default;
+}
+
+a:hover {
+  cursor: url("Data/Cursor.png") 10 10, default;
+}
+
+a {
+  color: #ff1600;
+  text-decoration: none;
+}
+
+p {
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+}
+
+/* ================================
+   STICKY HEADER
+================================ */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgb(29, 28, 28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px 70spx;
+  border-bottom: 1px solid #ff1600;
+  box-sizing: border-box;
+  animation: headerShrink linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 300px;
+}
+
+@keyframes headerShrink {
+  0% {
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  100% {
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+/* ================================
+   TITEL
+================================ */
+.sticky-header h1 {
+  font-size: 120px;
+  margin: 0;
+  color: #ff1600;
+  text-align: center;
+  width: 100%;
+  animation: titelShrink linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 300px;
+}
+
+@keyframes titelShrink {
+  0% {
+    font-size: 120px;
+    text-align: center;
+    width: 100%;
+  }
+  100% {
+    font-size: 36px;
+    text-align: left;
+    width: auto;
+  }
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+.leiste {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  animation: leisteMove linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 300px;
+}
+
+@keyframes leisteMove {
+  0% {
+    margin-top: 15px;
+    justify-content: center;
+  }
+  100% {
+    margin-top: 0;
+    justify-content: flex-end;
+  }
+}
+
+.leiste a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.leiste a:hover {
+  color: #ff1600;
+}
+
+/* ================================
+   LAYOUT
+================================ */
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 400px;
+}
+
+/* ================================
+   BIO
+================================ */
+.bio {
+  /* max-width: 700px; */
+  width: 100%;
+  margin: 400px auto 0;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ff1600;
+}
+
+.bio p {
+  margin-left: 25vw;
+  margin-right: 25vw;
+}
+
+/* ================================
+   BILDER ÜBERSICHT
+================================ */
+.bild-übersicht {
+  display: grid;
+  max-width: 1300px;
+  margin: 60px auto;
+  padding: 80px 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  border-top: 1px solid #ff1600;
+  border-bottom: 1px solid #ff1600;
+}
+
+/* Projektbilder */
+.blur {
+  border-radius: 10px;
+}
+
+/* Übersichtsbilder */
+.bild-card img {
+  border-radius: 10px;
+}
+
+/* ================================
+   BILD CARDS MIT OVERLAY
+================================ */
+.bild-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.bild-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.bild-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 20px 15px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  color: white;
+  font-family: "pressuru", serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+.bild-card:hover img {
+  opacity: 0.75;
+  transform: scale(1.02);
+}
+
+.bild-card:hover .bild-overlay span {
+  color: #ff1600;
+  transition: color 0.3s ease;
+}
+
+/* ================================
+   PROJEKTE
+================================ */
+.projekt-repros {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.projekt-titel {
+  font-size: 28px;
+  padding-left: 100px;
+  padding-top: 60px;
+  border-top: 1px solid #ff1600;
+}
+
+.projektbeschrieb {
+  max-width: 800px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  color:rgb(192, 188, 188)
+}
+
+/* ================================
+   BLUR HOVER EFFEKT
+================================ */
+.grid-container:has(.blur:hover) .blur {
+  filter: blur(3px);
+  opacity: 0.5;
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.blur:hover {
+  filter: blur(0) !important;
+  opacity: 1 !important;
+}
+
+/* ================================
+   KONTAKT
+================================ */
+.kontakt {
+  text-align: left;
+  border-top: 1px solid #ff1600;
+  padding-top: 40px;
+  font-size: 30px;
+}
+
+/* ================================
+   HANDY
+================================ */
+@media (max-width: 600px) {
+  .bio {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .sticky-header {
+    padding: 15px 20px;
+  }
+
+  .leiste {
+    gap: 15px;
+  }
+
+  .leiste a {
+    font-size: 14px;
+  }
+}
