@@ -385,10 +385,70 @@ html {
 @media (hover:hover) and (pointer:fine){
   .hslider__btn{ display:block; }
 }
-@media (max-width: 520px){
-  .hslider__intro{ width: 210px; min-width: 210px; }
-  .hslider__intro h3{ font-size: 34px; }
-  .card{ width: 300px; min-width: 300px; }
+/* ================================
+   SLIDER RESPONSIVE
+================================ */
+
+/* Tablet */
+@media (max-width: 720px){
+  .hslider{
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 12px;
+  }
+
+  /* Intro-Karte: horizontal, kompakt */
+  .hslider__intro{
+    position: static;
+    width: 100%;
+    min-width: unset;
+    border-radius: 14px;
+  }
+  .hslider__introInner{
+    padding: 14px 16px;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  .hslider__intro h3{
+    font-size: 26px;
+    letter-spacing: -0.3px;
+  }
+
+  /* Karten passen sich der Breite an */
+  .hslider__track{
+    padding: 0 0 8px 0;
+    scroll-padding-left: 0;
+  }
+  .card{
+    width: 78vw;
+    min-width: 260px;
+    max-width: 340px;
+  }
+
+  /* Buttons immer sichtbar auf kleinen Screens */
+  .hslider__btn{
+    display: block;
+    top: unset;
+    bottom: 14px;
+    transform: none;
+  }
+  .hslider__btn--left{
+    left: unset;
+    right: 62px;
+  }
+  .hslider__btn--right{
+    right: 14px;
+  }
+}
+
+/* Kleines Handy */
+@media (max-width: 400px){
+  .card{
+    width: 85vw;
+    min-width: 240px;
+  }
+  .hslider__intro h3{ font-size: 22px; }
 }
 
 /* ================================
