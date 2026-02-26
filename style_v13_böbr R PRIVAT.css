@@ -377,6 +377,7 @@ html {
   backdrop-filter: blur(10px);
   cursor: pointer;
   display:none;
+  cursor: url("Data/Pointer.png") 10 10, default;
 }
 .hslider__btn:hover{ border-color: rgba(255,22,0,0.45); }
 .hslider__btn--left{ left: 280px; }
